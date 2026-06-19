@@ -1,5 +1,5 @@
 ---
-title: 人+Agent模式之速通本科论文|updating
+title: 人+Agent模式之速通本科论文|over
 date: 2026-05-05 05:06:00
 updated: 2026-05-05 07:06:00
 type: tech
@@ -48,6 +48,16 @@ Agent模式，也就是可以外部交互的ai，可以操作我们的文件&外
 - 从标准模板开始：一般学院会给`要求与撰写规范`与 `往届参考论文`，参考论文大概率可能是pdf格式，此处推荐 :badge[mineru]{link = "https://github.com/opendatalab/mineru"} :blur[```Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.```] or baidu的 :badge[PaddleOCR]{link = "https://github.com/PaddlePaddle/PaddleOCR"} 
 :blur[```Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.``` ]，虽然很多人吐槽baidu搜索广告满天飞，但是ocr服务很不错，直接使用web端或者py服务调用api都可，将pdf转换后的md文本和 `要求与撰写规范` 均放置在doc目录下作为参考引用reference 
 
+### 降aigc
+
+本科生论文，在ai盛行的时代实则最重要的是如何降aigc，且保持一个论文专业度和避免aigc率过高的balance.
+市面上已经有非常多的skills&prompt，可自行搜索，逐段润色加手工修改. 实测网页版ds降aigc效果非常的口水话，很大程度上会被导师打回；而gpt润色后结果不失专业度但aigc率仍可能较高；
+同样实测了一些常见的测aigc网站（paperpass、paperpure、speedai）.三者判定aigc内部逻辑不一致，导致降aigc的方式也不太一样，speedai算是较为宽松的一个，大致都为改一些关键词已达到避开被判定为llm生成的效果，甚至还有把我不同分段的部分直接合并为一段的操作（aigc直线降为0%），给我气笑了.
+
+&测AIGC，基于室友的情况&学校检测aigc的平台为维普，如果是算法类论文的话，paperpass/paperpure的结果可能偏差较大；如果是大众的系统设计开发，paperpass的结果可能比较接近. 当然只是小数据样本，参考性不大，还是以学校指定测试平台实际测试结果为准来进行降aigc率.
+
+
+由于后续忙着降aigc和反复调论文格式 耗时较多 一直没时间同步更新，加上本人已毕业awa，论文已于本人切割，此文终于此.
 
 ```text wrap [about PaddleOCR] 
 Turn any PDF or image document into structured data for your AI. A powerful, lightweight OCR toolkit that bridges the gap between images/PDFs and LLMs. Supports 100+ languages.

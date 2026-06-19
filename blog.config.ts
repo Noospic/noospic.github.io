@@ -7,7 +7,7 @@ const basicConfig = {
 	description: 'Noospic の 闲言碎语 - 虽然现实没有星露谷，但每一篇blog都可以看作我的耕作log',
 	author: {
 		name: 'Noospic',
-		avatar: 'https://cdn3.linux.do/optimized/4X/c/f/f/cff12e57309098ee4610769affde01b508e02b61_2_288x288.jpeg',
+		avatar: 'https://cdn.ldstatic.com/user_avatar/linux.do/noospic/288/690854_2.png',
 		email: 'noospic22@gmail.com',
 		homepage: 'https://www.windblow.me/',
 	},
@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://cdn3.linux.do/optimized/4X/c/f/f/cff12e57309098ee4610769affde01b508e02b61_2_288x288.jpeg',
+	favicon: 'https://cdn.ldstatic.com/user_avatar/linux.do/noospic/288/690854_2.png',
 	language: 'zh-CN',
 	timeEstablished: '2024-12-04',
 	timeZone: 'Asia/Shanghai',
