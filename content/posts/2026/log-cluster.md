@@ -10,6 +10,69 @@ tags: [杂谈]
 > 一些闲言碎语log
 > 不定期输出
 
+### 21/06/2026
+
+::quote
+#default
+21/06/2026
+::
+
+前半个月在忙毕设材料交稿，连着十多天没有上L站，恰巧订阅节点还全都error了，而又有一个这样的悖论--没有梯大部分机场又进不去（其中就包括我订阅的年付机场），以为是跑路加上暂时没需求挂梯 索性没管了.
+
+有空又试了试发现之前配置的时候加了自动更新订阅link,于是切换订阅发现节点都变了，ip取消了之前的很多小众国家，集中在hk、us、tw、uk、sg几个区域，甚至还标上了家宽的字样
+
+此时我不免诧然以及极度怀疑机场主在玩弄买家，10r一月不到的价格（年付加上节假日活动优惠），甚至还是us家宽,,,
+
+之前一直有看到评论说ip好可以跳过claude手机号验证注册，抱着玩一玩的心态打开了Claude官网，打算注册一个账号，之前由于一直卡在手机号验证但又不想接码的原因，一直没有注册上.结果Gmail登录后直接跳转到了对话tab页..... 很丝滑...
+
+
+参考 :badge[教你如何辨别家宽]{link = "https://linux.do/t/topic/309732"} 测试了一下:
+另附ip，ping0的检测结果asn单isp，ipinfo似乎看不到company的type；&依据其他几点完全可以pass，当然其实从价格就可以pass了hh
+
+::pic
+-----
+src: /img/2026/Snipaste_2026-06-21_01-47-17.png
+# mirror: # 是否借助第三方图片加载服务，见源代码
+caption: book
+# zoom: false # 是否开启灯箱缩放，默认开启
+---
+:: 
+
+::pic
+-----
+src: /img/2026/Snipaste_2026-06-21_02-41-06.png
+# mirror: # 是否借助第三方图片加载服务，见源代码
+caption: book
+# zoom: false # 是否开启灯箱缩放，默认开启
+---
+:: 
+
+不过终于注册上了claude也不赖,, 虽然很少用web端了，也不敢在官网渠道订阅.
+
+----
+
+最后丢一个typora的claude主题，动效我也很喜欢，基本完美复刻Claude风格：
+
+https://github.com/blaxisomu/typora_claude
+
+这个也不错- https://github.com/Muyiiiii/Typora_Claude-Like_Theme
+
+
+::pic
+-----
+
+src: /img/2026/Snipaste_2026-06-21_03-05-43.png
+
+# mirror: # 是否借助第三方图片加载服务，见源代码
+
+caption: typora-claude-theme
+
+# zoom: false # 是否开启灯箱缩放，默认开启
+
+---
+
+:: 
+
 
 ### 20/06/2026
 
