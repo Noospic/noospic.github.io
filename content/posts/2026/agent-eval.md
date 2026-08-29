@@ -11,10 +11,11 @@ draft: true
 > - :badge[AI Agent & Skill 测评方案及落地实践]{link = "https://mp.weixin.qq.com/s/PUbGqheJhFMmb6hGj1ZtOw"}
 > - :badge[Agent Evaluation Harness 完全指南 —— 让你的 Agent 评估不再玄学]{link = "https://github.com/adongwanai/AgentGuide/blob/main/docs/02-tech-stack/26-agent-evaluation-harness-guide.md"}
 > - :badge[如何评估你的 Skill 质量——从触发准确率到输出质量的系统方法]{link = "https://juejin.cn/post/7644538557830397988"}
+> - :badge[Agent 越改越乱之后，我用评测和轨迹把它拉回来了]{link = "https://mp.weixin.qq.com/s/h0ZsF5FdYZ_j5XrGmHBdXw"}
 
 ### 前言碎碎念
 
-最近换部门 业务转向 Agent/LLM 评测
+最近业务转向 Agent/LLM 评测
 
 说实话，刚开始还是很不适应，之前 bu 做的需求都是工程化/结果确定
 
