@@ -15,7 +15,6 @@ export default [
 				author: 'Faust',
 				//sitenick: 'Faust',
 				title: 'Faust',
-				//desc: 'Faust佬友'
 				link: 'https://fft.im/',
 				feed: 'https://fft.im/rss.xml',
 				icon: 'https://fft.im/arch.jpg',
@@ -40,10 +39,10 @@ export default [
 				title: 'XnneHang',
 				link: 'https://xnnehang.top/',
 				feed: 'https://xnnehang.top/rss.xml',
-				icon: "https://linux.do/uploads/default/optimized/4X/1/1/b/11bad4399b6b69291630913d58f85f8b11b60aa6_2_1000x1000.webp",
-				avatar: "https://linux.do/uploads/default/optimized/4X/1/1/b/11bad4399b6b69291630913d58f85f8b11b60aa6_2_1000x1000.webp",
+				icon: "https://xnnehang.top/avatar.jpg",
+				avatar: "https://xnnehang.top/avatar.jpg",
 				date: '2024-02-01',
-				comment: '青石巷道闻星铃，披虹沐雪见本心。他日北寒仙界会，一声道友尽沧桑。',
+				comment: '写代码是因为爱。',
 			},
 			{
 				author: '口袋分享记',
