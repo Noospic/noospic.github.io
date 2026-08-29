@@ -39,6 +39,6 @@ caption: stitch export setting
   - 后端：参考现有的设计框架源码，like 若依，基本的权限校验 数据管理等。基本的框架还是要设计好，分各个模块专项负责
   - 前端：结合前端热门agent [skills](https://skills.sh/) `关键字：frontend` 或者个人喜欢的设计风格（Claude官网 、Apple等）规约限制“ai模板味”
 
-ide：vscode + 插件（`claude code for vscode , codex , copilot...`）或者官方ai ide/cil，调试切换到熟悉的ide即可（pycharm，idea等）
+ide：vscode + 插件（`claude code for vscode , codex , copilot...`）或者官方ai ide/cli，调试切换到熟悉的ide即可（pycharm，idea等）
 
 > 闲言碎语：热点技术迭代很快，虽说倒也不必有热点就一股脑得扑上去，不过关注一些也不是一件坏事，就当新闻听听也行 -> [juya](https://space.bilibili.com/285286947/?spm_id_from=333.788.upinfo.detail.click) . 另外最重要的一点应该就是实践了吧，很多概念刚开始可能看得眼花缭乱，可以结合实际项目来使用，慢慢捋清思路和使用技巧，迭代转化为自己的知识库.

@@ -47,6 +47,12 @@ const categoryIcon = computed(() => getCategoryIcon(categoryLabel.value))
 				{{ categoryLabel }}
 			</span>
 
+			
+			<span v-if="draft" class="article-draft">
+				<Icon name="ph:pencil-simple-bold" />
+				草稿
+			</span>
+			
 			<span v-if="readingTime?.words" class="article-words">
 				<Icon name="ph:paragraph-bold" />
 				{{ formatNumber(readingTime?.words) }}字

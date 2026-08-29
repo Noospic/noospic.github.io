@@ -52,6 +52,11 @@ const { copy, copied } = useCopy(shareText)
 				{{ categoryLabel }}
 			</span>
 
+			<span v-if="draft" class="post-draft">
+				<Icon name="ph:pencil-simple-bold" />
+				草稿
+			</span>
+
 			<span>
 				<Icon name="ph:paragraph-bold" />
 				{{ formatNumber(readingTime?.words) }} 字

@@ -19,6 +19,11 @@ function setTocAndMeta() {
 	meta.value = post.value?.meta
 }
 
+// 生产环境隐藏草稿
+if (post.value && !import.meta.dev && post.value.draft) {
+	post.value = null
+}
+
 setTocAndMeta()
 
 if (post.value) {

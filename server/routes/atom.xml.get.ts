@@ -41,11 +41,12 @@ function renderContent(post: ContentCollectionItem) {
 }
 
 export default defineEventHandler(async (event) => {
-	const posts = await queryCollection(event, 'content')
+	const posts = (await queryCollection(event, 'content')
 		.where('stem', 'LIKE', 'posts/%')
 		.order('updated', 'DESC')
 		.limit(blogConfig.feed.limit)
-		.all()
+		.all())
+		.filter(post => import.meta.dev || !post.draft)
 
 	const entries = posts.map(post => ({
 		id: getUrl(post.path),

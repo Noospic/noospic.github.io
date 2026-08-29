@@ -12,10 +12,21 @@ const segmenter = Intl.Segmenter && new Intl.Segmenter(appConfig.language, { gra
 // await useAsyncData() 会阻塞渲染
 const { data, status } = await useLazyAsyncData(
 	'search',
-	() => queryCollectionSearchSections('content', {
-		ignoredTags: ['pre'],
-	}),
+	async () => {
+		const [sections, draftPaths] = await Promise.all([
+			queryCollectionSearchSections('content', { ignoredTags: ['pre'] }),
+			import.meta.dev
+				? Promise.resolve([] as string[])
+				: queryCollection('content')
+						.where('draft', '=', true)
+						.select('path')
+						.all()
+						.then(list => list.map(p => p.path)),
+		])
+		return sections.filter(s => !draftPaths.some(path => s.id === path || s.id.startsWith(`${path}#`)))
+	},
 )
+
 
 const miniSearch = new MiniSearch({
 	fields: ['title', 'content'],

@@ -5,10 +5,18 @@ const route = useRoute()
 
 const { data: surrounds } = await useAsyncData(
 	`surround-${route.path}`,
-	() => queryCollectionItemSurroundings('content', route.path, { fields: ['date', 'title', 'type'] })
-		.order('date', 'ASC')
-		.where('stem', 'LIKE', `posts/%`),
+	async () => {
+		const posts = await queryCollection('content')
+			.where('stem', 'LIKE', 'posts/%')
+			.order('date', 'ASC')
+			.select('date', 'path', 'title', 'type')
+			.all()
+			.then(list => list.filter(p => import.meta.dev || !p.draft))
+		const idx = posts.findIndex(p => p.path === route.path)
+		return [posts[idx - 1] ?? null, posts[idx + 1] ?? null]
+	},
 )
+
 
 const [prev = null, next = null] = surrounds.value ?? []
 
