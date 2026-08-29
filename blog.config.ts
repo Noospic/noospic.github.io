@@ -7,7 +7,7 @@ const basicConfig = {
 	description: 'Noospic の 闲言碎语 - 虽然现实没有星露谷，但每一篇blog都可以看作我的耕作log',
 	author: {
 		name: 'Noospic',
-		avatar: 'https://cdn.ldstatic.com/user_avatar/linux.do/noospic/288/690854_2.png',
+		avatar: '/noospic.jpeg',
 		email: 'noospic22@gmail.com',
 		homepage: 'http://noospic.github.io/',
 	},
@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://cdn.ldstatic.com/user_avatar/linux.do/noospic/288/690854_2.png',
+	favicon: './noospic.jpeg',
 	language: 'zh-CN',
 	timeEstablished: '2024-12-04',
 	timeZone: 'Asia/Shanghai',
