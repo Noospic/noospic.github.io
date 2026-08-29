@@ -9,7 +9,7 @@ const { data: surrounds } = await useAsyncData(
 		const posts = await queryCollection('content')
 			.where('stem', 'LIKE', 'posts/%')
 			.order('date', 'ASC')
-			.select('date', 'path', 'title', 'type')
+			.select('date', 'draft', 'path', 'title', 'type')
 			.all()
 			.then(list => list.filter(p => import.meta.dev || !p.draft))
 		const idx = posts.findIndex(p => p.path === route.path)
