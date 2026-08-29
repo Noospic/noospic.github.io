@@ -3,7 +3,7 @@ title: 人+Agent模式之速通本科论文|over
 date: 2026-05-05 05:06:00
 updated: 2026-05-05 07:06:00
 type: tech
-image: https://haowallpaper.com/link/common/file/previewFileImg/2ed5eec0fc56fbdf9525214b84b2f0ee
+image: https://picx-6wq.pages.dev/rest/7Kwxq9k.png
 categories: [agent]
 tags: [杂谈,tools]
 ---

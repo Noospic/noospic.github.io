@@ -3,7 +3,7 @@ title: self record
 date: 2025-07-27 11:45:00
 updated: 2026-05-08 01:45:00
 type: story
-image: https://haowallpaper.com/link/common/file/previewFileImg/ab778e0263d2e9a8a3a1d59a4fee8917ab778e0263d2e9a8a3a1d59a4fee8917
+image: https://picx-6wq.pages.dev/rest/wgDYq9k.png
 categories: [生活]
 tags: [杂谈]
 ---

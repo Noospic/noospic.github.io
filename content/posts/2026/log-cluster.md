@@ -3,7 +3,7 @@ title: "[闲言碎语]log-合集"
 date: 2026-04-06 07:06:00
 updated: 2026-08-25 01:36:00
 type: tech
-image: https://raw.githubusercontent.com/Snnerney/image/refs/heads/main/ChatGPT%20Image%202026%E5%B9%B45%E6%9C%885%E6%97%A5%2006_52_53.png
+image: https://picx-6wq.pages.dev/rest/P2mxq9k.png
 categories: [生活]
 tags: [杂谈]
 ---
