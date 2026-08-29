@@ -108,6 +108,13 @@ const categoryIcon = computed(() => getCategoryIcon(categoryLabel.value))
 	color: var(--cg-color);
 }
 
+.article-draft {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.2em;
+	color: var(--c-accent);
+}
+
 .article-cover {
 	position: absolute;
 	opacity: 0.8;

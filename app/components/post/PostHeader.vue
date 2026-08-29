@@ -151,4 +151,11 @@ const { copy, copied } = useCopy(shareText)
 		column-gap: clamp(1em, 3%, 1.5em);
 	}
 }
+
+.post-draft {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.2em;
+	color: var(--c-accent);
+}
 </style>
