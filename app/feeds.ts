@@ -41,6 +41,7 @@ export default [
 				feed: 'https://xnnehang.top/rss.xml',
 				icon: "https://xnnehang.top/avatar.jpg",
 				avatar: "https://xnnehang.top/avatar.jpg",
+				archs: ['Astro'],
 				date: '2024-02-01',
 				comment: '写代码是因为爱。',
 			},
