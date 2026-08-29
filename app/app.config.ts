@@ -58,7 +58,7 @@ export default defineAppConfig({
 		/** 侧边栏底部图标导航 */
 		iconNav: [
 			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
-			{ icon: 'ph:github-logo-bold', text: 'GitHub: Snnerney', url: 'https://github.com/Snnerney' },
+			{ icon: 'ph:github-logo-bold', text: 'GitHub: Noospic', url: 'http://github.com/Noospic' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
@@ -66,7 +66,7 @@ export default defineAppConfig({
 			{
 				title: '社交',
 				items: [
-					{ icon: 'ph:github-logo-bold', text: 'GitHub: Snnerney', url: 'https://github.com/Snnerney' },
+					{ icon: 'ph:github-logo-bold', text: 'GitHub: Noospic', url: 'http://github.com/Noospic' },
 					{ icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
 			},

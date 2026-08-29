@@ -9,7 +9,7 @@ const basicConfig = {
 		name: 'Noospic',
 		avatar: 'https://cdn.ldstatic.com/user_avatar/linux.do/noospic/288/690854_2.png',
 		email: 'noospic22@gmail.com',
-		homepage: 'http://snnerney.github.io/',
+		homepage: 'http://noospic.github.io/',
 	},
 	copyright: {
 		abbr: 'CC BY-NC-SA 4.0',
@@ -20,7 +20,7 @@ const basicConfig = {
 	language: 'zh-CN',
 	timeEstablished: '2024-12-04',
 	timeZone: 'Asia/Shanghai',
-	url: 'http://snnerney.github.io/',
+	url: 'http://noospic.github.io/',
 	defaultCategory: '未分类',
 }
 
