@@ -7,7 +7,7 @@ const props = defineProps<FriendUpdate>()
 
 <template>
 <UtilLink
-	class="update-card card upraise"
+	class="update-card gradient-card"
 	:to="link"
 	rel="noopener"
 	target="_blank"
@@ -18,20 +18,16 @@ const props = defineProps<FriendUpdate>()
 		:alt="author"
 		loading="lazy"
 	/>
-	<div class="meta">
-		<div class="title line-clamp-2">
-			{{ props.title }}
-		</div>
-		<div class="sub">
-			<span>{{ props.author }}</span>
-			<span class="dot">·</span>
-			<time :datetime="props.publishedAt">{{ toZdtLocaleString(props.publishedAt, 'date') }}</time>
-		</div>
-		<p v-if="props.summary" class="summary line-clamp-1">
-			{{ props.summary }}
-		</p>
+	<div class="info">
+	
+		<span class="content">
+			<span class="title"> {{ props.title }}</span>
+			<span v-if="props.summary" class="summary">{{ props.summary }}</span>
+		</span>
 	</div>
-	<Icon class="arrow" name="ph:arrow-square-out-bold" />
+	<time class="date" :datetime="props.publishedAt">
+		{{ toZdtLocaleString(props.publishedAt, 'date') }}
+	</time>
 </UtilLink>
 </template>
 
@@ -39,64 +35,79 @@ const props = defineProps<FriendUpdate>()
 .update-card {
 	display: flex;
 	align-items: center;
-	gap: 0.75em;
-	padding: 0.75em 1em;
+	gap: 0.6em;
+	overflow: hidden;
+	min-width: 0;
+	max-width: 100%;
+	margin: 0;
+	padding: 0.4em 0.75em;
+	border: 1px solid var(--c-border);
+	border-radius: 0.5em;
+	line-height: 1.6;
+	transition: transform 0.2s;
 	animation: float-in 0.2s var(--delay) backwards;
+
+	&:hover {
+		transform: translateY(-2px);
+	}
 
 	.avatar {
 		flex-shrink: 0;
-		width: 2.5rem;
-		height: 2.5rem;
+		width: 2rem;
+		height: 2rem;
 		border-radius: 50%;
 		box-shadow: var(--box-shadow-2);
 		background-color: var(--ld-bg-card);
 		object-fit: cover;
 	}
 
-	.meta {
+	.info {
+		display: flex;
 		flex: 1;
+		align-items: center;
+		gap: 0.5em;
 		min-width: 0;
-		line-height: 1.4;
+	}
+
+	.author {
+		flex-shrink: 0;
+		font-size: 0.85em;
+		color: var(--c-text-2);
+	}
+
+	.content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		overflow: hidden;
+		min-width: 0;
+		font-size: 0.85em;
+		line-height: 1.3;
+		gap: 0.45em;
+	}
+
+	.title,
+	.summary {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 
 	.title {
 		font-weight: 500;
-	}
-
-	.sub {
-		margin-top: 0.2em;
-		font-size: 0.85em;
-		color: var(--c-text-2);
-
-		.dot {
-			margin-inline: 0.4em;
-		}
+		color: var(--c-text);
 	}
 
 	.summary {
-		opacity: 0.8;
-		margin-top: 0.2em;
-		font-size: 0.85em;
 		color: var(--c-text-2);
 	}
 
-	.arrow {
+	.date {
 		flex-shrink: 0;
+		margin-inline-start: auto;
+		font-size: 0.8em;
+		text-align: end;
 		color: var(--c-text-3);
 	}
-}
-
-.line-clamp-1 {
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-line-clamp: 1;
-	-webkit-box-orient: vertical;
-}
-
-.line-clamp-2 {
-	display: -webkit-box;
-	overflow: hidden;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
 }
 </style>

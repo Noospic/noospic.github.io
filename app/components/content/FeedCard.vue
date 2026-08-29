@@ -52,8 +52,10 @@ function getInspectStyle(src: string): CSSProperties {
 			<Icon v-if="appConfig.link.remindNoFeed && !feed" class="no-feed" name="ph:bell-simple-slash-bold" />
 		</div>
 
+		<div class="feed-text">
 		<span class="author">{{ author }}</span>
 		<span class="sitenick">{{ sitenick }}</span>
+		</div>
 	</UtilLink>
 
 	<template #content>
@@ -131,6 +133,12 @@ function getInspectStyle(src: string): CSSProperties {
 			inset-inline-end: -0.5em;
 			bottom: 0;
 		}
+	}
+
+	.feed-text {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.3;
 	}
 
 	.author {

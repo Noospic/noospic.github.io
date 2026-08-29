@@ -90,7 +90,7 @@ export const myFeed: FeedEntry = {
 	avatar: blogConfig.author.avatar,
 	archs: ['Nuxt', 'Vercel'],
 	date: blogConfig.timeEstablished,
-	comment: '这是我自己',
+	comment: 'Reality has no Stardew Valley — yet every blog is my farm log',
 }
 
 export default blogConfig

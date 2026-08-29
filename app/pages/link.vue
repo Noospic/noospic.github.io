@@ -25,7 +25,6 @@ const copyFields = {
 	头像: myFeed.avatar,
 }
 const { data: updates, pending } = await useFetch('/api/friends-updates')
-
 </script>
 
 <template>
@@ -50,8 +49,10 @@ const { data: updates, pending } = await useFetch('/api/friends-updates')
 			<p v-else-if="!updates?.length" class="text-center">
 				暂时没有抓到更新。
 			</p>
-			<FriendUpdateCard v-for="(item, index) in updates" v-else :key="item.link + item.publishedAt" v-bind="item"
-				:style="`--delay: ${(index % 20) * 0.03}s`" />
+			<FriendUpdateCard
+				v-for="(item, index) in updates" v-else :key="item.link + item.publishedAt" v-bind="item"
+				:style="`--delay: ${(index % 20) * 0.03}s`"
+			/>
 		</div>
 	</template>
 
@@ -61,7 +62,6 @@ const { data: updates, pending } = await useFetch('/api/friends-updates')
 			可于 link.md 配置友链补充说明。
 		</p>
 	</template>
-
 </Tab>
 </template>
 
@@ -72,7 +72,7 @@ const { data: updates, pending } = await useFetch('/api/friends-updates')
 
 .update-list {
 	display: grid;
-	gap: 0.75rem;
+	gap: 0.35rem;
 	max-width: 48rem;
 	margin: 1rem auto;
 }
