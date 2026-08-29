@@ -49,8 +49,9 @@ const timeIntervals = [
 ]
 
 export function timeElapse(date: string | Temporal.PlainDateTime, maxDepth = 2) {
+	const dateTime = typeof date === 'string' ? toZonedTemporal(date).toPlainDateTime() : date
 	let timeString = ''
-	let secRemained = Temporal.Now.plainDateTimeISO().since(date, { largestUnit: 'second' }).seconds
+	let secRemained = Temporal.Now.plainDateTimeISO().since(dateTime, { largestUnit: 'second' }).seconds
 	for (const interval of timeIntervals) {
 		const count = Math.floor(secRemained / interval.threshold)
 		if (count <= 0)

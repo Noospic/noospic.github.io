@@ -33,3 +33,20 @@ export interface FeedGroup {
 	/** 友链列表 */
 	entries: FeedEntry[]
 }
+
+export interface FriendUpdate {
+	/** 文章标题 */
+	title: string
+	/** 文章链接 */
+	link: string
+	/** ISO 8601 格式发布时间 */
+	publishedAt: string
+	/** 文章摘要 */
+	summary?: string
+	/** 博客作者 */
+	author: string
+	/** 作者头像 */
+	avatar: string
+	/** 来源博客主页 */
+	sourceLink: string
+}

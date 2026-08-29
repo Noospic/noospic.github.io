@@ -72,6 +72,7 @@
     "cspell": "catalog:quality",
     "eslint": "catalog:quality",
     "fast-xml-builder": "catalog:util",
+    "fast-xml-parser": "^5.11.1",
     "nuxt-llms": "catalog:content",
     "oxc-minify": "catalog:util",
     "p-limit": "catalog:util",

@@ -24,6 +24,8 @@ const copyFields = {
 	网址: myFeed.link,
 	头像: myFeed.avatar,
 }
+const { data: updates, pending } = await useFetch('/api/friends-updates')
+
 </script>
 
 <template>
@@ -31,14 +33,9 @@ const copyFields = {
 	<BlogHeader to="/" suffix="友链" tag="h1" />
 </div>
 
-<FeedGroup
-	v-for="group in feeds"
-	:key="group.name"
-	v-bind="group"
-	:shuffle="appConfig.link.randomInGroup"
-/>
+<FeedGroup v-for="group in feeds" :key="group.name" v-bind="group" :shuffle="appConfig.link.randomInGroup" />
 
-<Tab :tabs="['我的博客信息', '申请友链']" center>
+<Tab :tabs="['我的博客信息', '朋友动态', '申请友链']" center>
 	<template #tab1>
 		<div class="link-tab">
 			<FeedCard v-bind="myFeed" />
@@ -46,21 +43,37 @@ const copyFields = {
 		</div>
 	</template>
 	<template #tab2>
-		<ContentRenderer
-			v-if="postLink"
-			:value="postLink"
-			class="article"
-		/>
+		<div class="link-tab update-list">
+			<p v-if="pending" class="text-center">
+				正在刷新友链动态……
+			</p>
+			<p v-else-if="!updates?.length" class="text-center">
+				暂时没有抓到更新。
+			</p>
+			<FriendUpdateCard v-for="(item, index) in updates" v-else :key="item.link + item.publishedAt" v-bind="item"
+				:style="`--delay: ${(index % 20) * 0.03}s`" />
+		</div>
+	</template>
+
+	<template #tab3>
+		<ContentRenderer v-if="postLink" :value="postLink" class="article" />
 		<p v-else class="text-center">
 			可于 link.md 配置友链补充说明。
 		</p>
 	</template>
-</Tab>
 
+</Tab>
 </template>
 
 <style lang="scss" scoped>
 .link-tab {
 	margin: 1rem;
+}
+
+.update-list {
+	display: grid;
+	gap: 0.75rem;
+	max-width: 48rem;
+	margin: 1rem auto;
 }
 </style>
