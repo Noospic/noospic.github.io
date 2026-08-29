@@ -333,9 +333,6 @@ importers:
       fast-xml-builder:
         specifier: catalog:util
         version: 1.1.4
-      fast-xml-parser:
-        specifier: ^5.11.1
-        version: 5.11.1
       nuxt-llms:
         specifier: catalog:content
         version: 0.2.0(magicast@0.5.2)
