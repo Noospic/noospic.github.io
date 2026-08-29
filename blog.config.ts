@@ -7,7 +7,7 @@ const basicConfig = {
 	description: 'Noospic の 闲言碎语 - 虽然现实没有星露谷，但每一篇blog都可以看作我的耕作log',
 	author: {
 		name: 'Noospic',
-		avatar: '/noospic.jpeg',
+		avatar: 'http://noospic.github.io/noospic.jpeg',
 		email: 'noospic22@gmail.com',
 		homepage: 'http://noospic.github.io/',
 	},
