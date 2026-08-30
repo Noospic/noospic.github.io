@@ -7,7 +7,7 @@ const BGM_API = 'https://api.bgm.tv/v0/users'
 
 const appConfig = useAppConfig()
 useSeoMeta({
-	title: '娱乐',
+	title: 'bangumi',
 	description: `${appConfig.title}追过的番剧、看过的影视、玩过的游戏，同步自 Bangumi。`,
 })
 
