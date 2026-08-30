@@ -34,14 +34,8 @@ const { data: updates, pending } = await useFetch('/api/friends-updates')
 
 <FeedGroup v-for="group in feeds" :key="group.name" v-bind="group" :shuffle="appConfig.link.randomInGroup" />
 
-<Tab :tabs="['我的博客信息', '朋友动态', '申请友链']" center>
-	<template #tab1>
-		<div class="link-tab">
-			<FeedCard v-bind="myFeed" />
-			<Copy v-for="(code, prompt) in copyFields" :key="prompt" :prompt :code />
-		</div>
-	</template>
-	<template #tab2>
+<Tab :tabs="['朋友动态', '我的博客信息', '申请友链']" center>
+		<template #tab1>
 		<div class="link-tab update-list">
 			<p v-if="pending" class="text-center">
 				正在刷新友链动态……
@@ -53,6 +47,12 @@ const { data: updates, pending } = await useFetch('/api/friends-updates')
 				v-for="(item, index) in updates" v-else :key="item.link + item.publishedAt" v-bind="item"
 				:style="`--delay: ${(index % 20) * 0.03}s`"
 			/>
+		</div>
+	</template>
+	<template #tab2>
+		<div class="link-tab">
+			<FeedCard v-bind="myFeed" />
+			<Copy v-for="(code, prompt) in copyFields" :key="prompt" :prompt :code />
 		</div>
 	</template>
 

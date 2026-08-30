@@ -2,7 +2,7 @@ import type { FeedEntry } from './app/types/feed'
 
 const basicConfig = {
 	title: 'Noospic',
-	subtitle: 'Noospic の 闲言碎语',
+	subtitle: '星露谷农民',
 	// 长 description 利好于 SEO
 	description: 'Noospic の 闲言碎语 - 虽然现实没有星露谷，但每一篇blog都可以看作我的耕作log',
 	author: {
