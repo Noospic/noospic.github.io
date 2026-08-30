@@ -67,7 +67,7 @@ export default [
 			{
 				author: '於清樂',
 				desc: 'this cute world',
-				feed: 'https://www.thyuu.com/feedhttps://thiscute.world/index.xml',
+				feed: 'https://thiscute.world/index.xml',
 				link: 'https://thiscute.world/',
 				icon: 'https://thiscute.world/favicon-16x16.png',
 				avatar: 'https://thiscute.world/favicon-16x16.png',
