@@ -120,9 +120,6 @@ watch([categoryKey, statusKey], reload)
 <template>
 <div class="media proper-height">
 	<header class="media-header">
-		<h1 class="text-creative">
-			娱乐
-		</h1>
 		<p class="media-desc">
 			追过的番剧、看过的影视、玩过的游戏，同步自
 			<UtilLink to="https://bgm.tv">
