@@ -77,6 +77,13 @@ export default defineNuxtConfig({
 			// 修复部分平台会在文章路径后添加 `/`，导致闪现 404 错误
 			// https://github.com/nuxt/content/issues/2378
 			autoSubfolderIndex: CLOUDFLARE_PAGES || GITHUB_ACTIONS || NETLIFY ? false : undefined,
+
+			// /media 配了 ssr:false（见 routeRules），crawler 不会渲染它，显式登记才能生成
+			// 那个纯客户端壳（/media/index.html）。路径是静态的，直接命中该文件。
+			routes: ['/media'],
+
+			// 切到 nuxt build 后需要显式打开 crawlLinks，否则爬虫不再顺着链接铺开
+			crawlLinks: true,
 		},
 	},
 
@@ -87,7 +94,17 @@ export default defineNuxtConfig({
 		'/atom.xml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
 		'/favicon.ico': { redirect: { to: blogConfig.favicon } },
 		'/zhilu.opml': { prerender: true, headers: { 'Content-Type': 'application/xml' } },
+		/**
+		 * 娱乐页的筛选状态写在 URL query（?category=&status=）。若预渲染，产物是不带 query 的
+		 * /media，payload.path 也就是 /media；水合时路由优先采信这个 renderedPath 而非地址栏
+		 * （同 /memos/_shell 的坑，且 Nuxt 还会 replaceState 到 renderedPath，把地址栏 query 也抹掉），
+		 * 于是深链 /media?category=game 首帧 query 为空，会先按默认(番剧·在看)取一次数、落定后再取一次。
+		 * ssr:false 让本页纯客户端渲染，产物无 path，route.query 从首帧即照地址栏，深链首取即正确。
+		 * 配合 nitro.prerender.routes 里登记 /media，生成可 200 直达的客户端壳。
+		 */
+		'/media': { ssr: false },
 	},
+
 
 	runtimeConfig: {
 		// @keep-sorted

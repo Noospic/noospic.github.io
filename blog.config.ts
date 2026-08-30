@@ -67,6 +67,22 @@ const blogConfig = {
 		robotsNotIndex: ['/preview', '/previews/*'],
 	},
 
+	/** Bangumi(bgm.tv)收藏，用于 /media 娱乐页（番剧/影视/游戏） */
+	bangumi: {
+		uid: '1278777',
+		/**
+		 * 资源反代前缀（bgm.tv 在大陆访问不稳）。拼成 {prefix}{完整目标URL}，
+		 * 如 https://api-bgm-tv.shinya.click/https://api.bgm.tv/...。留空则直连。
+		 * 缓存时长由远端自动配置，无需在前缀里带 /cache= 段。
+		 * 反代需回传 access-control-allow-origin（客户端取数要跨域）。
+		 */
+		/** 列表接口反代前缀 */
+		apiProxy: '',
+		/** 封面图反代前缀 */
+		imgProxy: '',
+	},
+
+
 	/** 博客 Atom 订阅源 */
 	feed: {
 		/** 订阅源最大文章数量 */
