@@ -81,6 +81,16 @@ export default [
 				avatar: 'https://picx-6wq.pages.dev/rest/DkIHU9k.png',
 				date: '2024-02-01',
 			},
+			{
+				author: '二丫讲梵',
+				feed: 'https://wiki.eryajf.net/rss.xml',
+				link: 'https://wiki.eryajf.net/',
+				icon: 'https://wiki.eryajf.net/img/logo.png',
+				avatar: 'https://wiki.eryajf.net/img/logo.png',
+				date: '2024-02-01',
+				comment: '💻学习📝记录🔗分享'
+			},
+			// https://wiki.eryajf.net/rss.xml
 		],
 	},
 ] satisfies FeedGroup[]
