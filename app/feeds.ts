@@ -58,4 +58,29 @@ export default [
 			},
 		],
 	},
+	// #region 漫游
+	{
+		name: '漫游',
+		desc: '网上冲浪时发现的精彩内容与常读订阅，与君共享。',
+		// @keep-sorted { "keys": ["date"] }
+		entries: [
+			{
+				author: '於清樂',
+				desc: 'this cute world',
+				feed: 'https://www.thyuu.com/feedhttps://thiscute.world/index.xml',
+				link: 'https://thiscute.world/',
+				icon: 'https://thiscute.world/favicon-16x16.png',
+				avatar: 'https://thiscute.world/favicon-16x16.png',
+				date: '2024-02-01',
+			},
+			{
+				author: '宝玉',
+				feed: 'https://s.baoyu.io/feed.xml',
+				link: 'https://baoyu.io/',
+				icon: 'https://baoyu.io/favicon.ico',
+				avatar: 'https://baoyu.io/favicon.ico',
+				date: '2024-02-01',
+			},
+		],
+	},
 ] satisfies FeedGroup[]
