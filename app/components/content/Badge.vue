@@ -15,7 +15,7 @@ const img = computed(() => {
 	if (ghUsername)
 		return getGithubAvatar(ghUsername)
 	if (props.link && isExtLink(props.link))
-		return getFavicon(getDomain(props.link))
+		return getFavicon(props.link)
 	return ''
 })
 

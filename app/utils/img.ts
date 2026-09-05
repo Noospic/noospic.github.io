@@ -1,3 +1,4 @@
+import { getDomain } from '../../shared/utils/link'
 // @keep-sorted
 const services = {
 	baidu: 'https://image.baidu.com/search/down?url=',
@@ -60,8 +61,9 @@ interface FaviconOptions {
 
 // https://github.com/microlinkhq/unavatar
 // https://docs.webp.se/public-services/unavatar/
-export function getFavicon(domain: string, options?: FaviconOptions) {
+export function getFavicon(url: string, options?: FaviconOptions) {
 	const { provider = 'google', size = 32 } = options || {}
+	const domain = getDomain(url)
 	return `https://unavatar.webp.se/${provider}/${domain}?w=${size}`
 }
 
