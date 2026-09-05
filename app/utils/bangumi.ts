@@ -13,21 +13,21 @@ export interface BgmCategory {
    /** collections API 的 subject_type：番剧 2 / 影视(三次元) 6 / 游戏 4 */
    subjectType: 2 | 4 | 6
    /** 三个状态在该分类下的措辞（番剧/影视用「看」，游戏用「玩」），顺序对齐 BGM_STATUS_TYPES */
-   statusLabels: [doing: string, collect: string, wish: string]
+   statusLabels: [doing: string, collect: string, wish: string, dropped?: string]
 }
 
 export const BGM_CATEGORIES: BgmCategory[] = [
-   { key: 'anime', label: '番剧', icon: 'ph:television-bold', unit: '部', subjectType: 2, statusLabels: ['在看', '看过', '想看'] },
-   { key: 'real', label: '影视', icon: 'ph:film-strip-bold', unit: '部', subjectType: 6, statusLabels: ['在看', '看过', '想看'] },
-   { key: 'game', label: '游戏', icon: 'ph:game-controller-bold', unit: '款', subjectType: 4, statusLabels: ['在玩', '玩过', '想玩'] },
+   { key: 'anime', label: '番剧', icon: 'ph:television-bold', unit: '部', subjectType: 2, statusLabels: ['在看', '看过', '想看', '搁置'] },
+   { key: 'real', label: '影视', icon: 'ph:film-strip-bold', unit: '部', subjectType: 6, statusLabels: ['在看', '看过', '想看', '搁置'] },
+   { key: 'game', label: '游戏', icon: 'ph:game-controller-bold', unit: '款', subjectType: 4, statusLabels: ['在玩', '玩过', '想玩', '搁置'] },
 ]
 
-/** 状态展示顺序：在看 / 看过 / 想看 → collections API 的 type 值 3 / 2 / 1 */
-export const BGM_STATUS_TYPES = [3, 2, 1] as const
+/** 状态展示顺序：在看 / 看过 / 想看 / 搁置 → collections API 的 type 值 3 / 2 / 1 */
+export const BGM_STATUS_TYPES = [3, 2, 1, 4] as const
 export type BgmStatusType = typeof BGM_STATUS_TYPES[number]
 
 /** 状态的 URL slug，顺序对齐 BGM_STATUS_TYPES 与各分类的 statusLabels */
-export const BGM_STATUS_KEYS = ['doing', 'collect', 'wish'] as const
+export const BGM_STATUS_KEYS = ['doing', 'collect', 'wish', 'dropped'] as const
 export type BgmStatusKey = typeof BGM_STATUS_KEYS[number]
 
 /**
