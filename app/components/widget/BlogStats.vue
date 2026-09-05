@@ -5,7 +5,7 @@ const appConfig = useAppConfig()
 const runtimeConfig = useRuntimeConfig()
 
 // 响应头不正确时，stats.value 可能会是字符串，首次属性访问可能为 undefined
-const { data: stats } = useFetch('/api/stats')
+const { data: stats } = useFetch('/api/stats', { responseType: 'json' })
 
 const yearlyTip = computed(() => Object
 	.entries(stats.value?.annual || {})
