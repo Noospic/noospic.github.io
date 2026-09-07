@@ -9,6 +9,13 @@ tags: [杂谈]
 ---
 一些闲言碎语log ｜ 不定期输出
 
+### 09/08/2026
+
+存档，感谢开源佬 | from :badge[developer blog]{link = "https://wxsm.space/2023/bv2mp3"}
+
+::github{repo="wxsms/bilibili-video2mp3"}
+::
+
 ### 08/25/2026
 
 ::quote
