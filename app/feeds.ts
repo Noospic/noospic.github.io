@@ -21,7 +21,7 @@ export default [
 				avatar: 'https://fft.im/_astro/logo.BS0qX_Ty_1A3M9v.webp',
 				archs: ['Astro', 'Vercel'],
 				date: '2024-02-01',
-				comment: 'get the chicken!',
+				desc: 'get the chicken!',
 			},
 			{
 				author: '焕昭君',
@@ -32,7 +32,7 @@ export default [
 				avatar: 'https://blog.huan666.de/img/author.webp',
 				archs: ['Hugo', 'Vercel'],
 				date: '2024-02-01',
-				comment: '知行合一，日拱一卒',
+				desc: '知行合一，日拱一卒',
 			},
 			{
 				author: 'XnneHang',
@@ -43,7 +43,7 @@ export default [
 				avatar: "https://xnnehang.top/avatar.jpg",
 				archs: ['Astro'],
 				date: '2024-02-01',
-				comment: '写代码是因为爱。',
+				desc: '写代码是因为爱。',
 			},
 			{
 				author: '口袋分享记',
@@ -54,7 +54,7 @@ export default [
 				avatar: "https://img.111620.xyz/2025/07/29/6887b5efbf768.png",
 				archs: ['WordPress'],
 				date: '2024-02-01',
-				comment: '所谓过往，皆为序章。虚室生白️',
+				desc: '所谓过往，皆为序章。虚室生白️',
 			},
 			{
 				author: '纸鹿摸鱼处',
@@ -65,7 +65,7 @@ export default [
 				avatar: "https://www.zhilu.site/api/avatar.png",
 				archs: ['Nuxt', 'Vercel'],
 				date: '2026-09-06',
-				comment: '纸鹿至麓不知路，支炉制露不止漉',
+				desc: '纸鹿至麓不知路，支炉制露不止漉',
 			},
 		],
 	},
@@ -99,7 +99,7 @@ export default [
 				icon: getFavicon('https://wiki.eryajf.net/'),
 				avatar: 'https://wiki.eryajf.net/img/logo.png',
 				date: '2024-02-01',
-				comment: '💻学习📝记录🔗分享'
+				desc: '💻学习📝记录🔗分享'
 			},
 			// https://wiki.eryajf.net/rss.xml
 		],
