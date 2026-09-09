@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { getDomain, getGithubUsername, isExtLink, safelyDecodeUriComponent } from '../../../shared/utils/link'
+
 // 即使 boolean 可选，其值也不会是 undefined
 const props = defineProps<{
 	img?: string
